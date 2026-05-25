@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // GitHub Pages SPA redirect: send all 404s back to index.html
+      // preserving the path as a query param, then restore it client-side.
+      var path = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
+      window.location.replace(
+        window.location.origin + '/?p=' + encodeURIComponent(path + search) + hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
